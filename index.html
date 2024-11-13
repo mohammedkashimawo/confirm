@@ -13,7 +13,60 @@
     <link rel="stylesheet" href="fonts/line-icons/style.css">
 
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="css/style.css">  
+    <style   type="text/css">
+
+
+      
+.example1 {
+  border:0px black solid;
+  overflow: hidden;
+  height:30%;
+  
+  
+ }
+ .example1 h3 {
+  font-size: 2rem;
+  color: black;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  /* Starting position */
+  -moz-transform:translateX(100%);
+  -webkit-transform:translateX(100%);	
+  transform:translateX(100%);
+  /* Apply animation to this element */	
+  -moz-animation: example1 15s linear 3;
+  -webkit-animation: example1 15s linear 3;
+  animation: example1 15s linear 3;
+ }
+ /* Move it (define the animation) */
+ @-moz-keyframes example1 {
+  0%   { -moz-transform: translateX(100%); }
+  100% { -moz-transform: translateX(-100%); }
+ }
+ @-webkit-keyframes example1 {
+  0%   { -webkit-transform: translateX(100%); }
+  100% { -webkit-transform: translateX(-100%); }
+ }
+ @keyframes example1 {
+  0%   { 
+  -moz-transform: translateX(100%); /* Firefox bug fix */
+  -webkit-transform: translateX(100%); /* Firefox bug fix */
+  transform: translateX(100%); 		
+  }
+  100% { 
+  -moz-transform: translateX(-100%); /* Firefox bug fix */
+  -webkit-transform: translateX(-100%); /* Firefox bug fix */
+  transform: translateX(-100%); 
+  }
+ }
+
+    </style>
+    
   </head>
   <body>
 
@@ -110,7 +163,21 @@
       </a>
 
     </section>
+
+
+    <!--this section is for scrolling messages for the website-->
     
+    <section style="width:100%;height:200px;border:0px yellow solid;position:relative;top:20vh;display:fixed;color:black">
+    
+<div class="example1">
+  <h3>FOR ALL OUTSOURCING SERVICES OUR CHARGES IS $5-$10 .. </h3>
+  </div>
+</section>
+    <!--this part ends  the scrolling section-->
+
+
+
+
     <!-- ABOUT US -->
     <section class="site-section about-us-section" id="about-us-section">
       <div class="container">
